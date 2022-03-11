@@ -23,6 +23,6 @@ jobs:
         uses: promiseofcake/circleci-trigger-action@v1
         with:
           user-token: ${{ secrets.CIRCLECI_TOKEN }}
-          project-slug: promiseofcake/circleci-trigger-action
+          project-slug: bang9/gh-to-circleci
           branch: ${{ env.BRANCH_NAME }}
           payload: '{"build_env": "${{ github.event.inputs.build_env }}" }'
