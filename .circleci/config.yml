@@ -3,7 +3,8 @@ version: 2.1
 parameters:
   build_env:
     type: enum
-    default: ["UA001", "UA002", "PACKG"]
+    default: "UA001"
+    enum: ["UA001", "UA002", "PACKG"]
 
 jobs:
   output:
