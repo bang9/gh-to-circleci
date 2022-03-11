@@ -1,0 +1,19 @@
+version: 2.1
+
+parameters:
+  build_env:
+    type: enum
+    default: ["UA001", "UA002", "PACKG"]
+
+jobs:
+  output:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - run: echo "this is an output build << pipeline.parameters.build_env >>"
+
+workflows:
+  output:
+    when: << pipeline.parameters.build_env >>
+    jobs:
+      - output
